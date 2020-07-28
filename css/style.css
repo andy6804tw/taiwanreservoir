@@ -1,0 +1,35 @@
+section{
+    background-color: #22384f;
+}
+
+.section-banner{
+    background-image: url(/image/bg.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+}
+
+h5{
+    color: aliceblue;
+    font-weight: bold;
+}
+
+/* Footer */
+#site-footer {
+    position: relative;
+    /* width: 100%; */
+    background: #b5ecf8;
+    height: 60px;
+  }
+  .copy{
+    background: #b5ecf8;
+    position: absolute;
+    bottom: 0;
+    font-size:12px;
+    text-align:center;
+    color: white;
+    font-weight: 300;
+    width: 100%;
+  }

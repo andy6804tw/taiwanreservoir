@@ -1,0 +1,9 @@
+Fonts used in this design:
+
+Font: Fascinate
+Author: Astigmatic
+Url: http://www.fontsquirrel.com/fonts/fascinate
+
+Font: Josefin Sans
+Author: Typemade
+Url: http://www.fontsquirrel.com/fonts/josefin-sans
