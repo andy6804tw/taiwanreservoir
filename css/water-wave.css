@@ -30,7 +30,7 @@
     display: -webkit-flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    color: rgba(255, 255, 255, 0.788);
     font-size: 54px;
     font-weight: bolder;
     }

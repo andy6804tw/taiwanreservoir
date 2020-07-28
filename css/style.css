@@ -3,12 +3,12 @@ section{
 }
 
 .section-banner{
-    background-image: url(/image/bg.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-image: url(/image/banner1.jpg);
+     /* background-repeat: no-repeat;
+    background-attachment: fixed;*/
     background-position: center;
-    background-size: cover;
-    height: 500px;
+    background-size: cover; 
+    height: 400px;
 }
 
 h5{
@@ -29,7 +29,6 @@ h5{
     bottom: 0;
     font-size:12px;
     text-align:center;
-    color: white;
-    font-weight: 300;
+    color: rgb(0, 0, 0);
     width: 100%;
   }
