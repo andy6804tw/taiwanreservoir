@@ -17,7 +17,7 @@
 	position: absolute;
 	color: #fff;
 	/* transform: translate(-50%,-50%); */
-    font-size: 5em;
+    /* font-size: 5em; */
     font-weight: bold;
 }
 .content h2:nth-child(1){
