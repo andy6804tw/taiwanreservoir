@@ -52,8 +52,11 @@ axios.get(`https://www.taiwanstat.com/waters/latest`)
 
 
             if(reservoirList[i]==='新山水庫')
-            reservoirItemHtml+='<div id="north">北部</div>';
-
+                reservoirItemHtml+='<h3 class="region text-left col-12" id="north">北部</h3>';
+            else if(reservoirList[i]==='永和山水庫')
+                reservoirItemHtml+='<h3 class="region text-left col-12" id="central">中部</h3>';
+            else if(reservoirList[i]==='仁義潭水庫')
+            reservoirItemHtml+='<h3 class="region text-left col-12" id="south">南部</h3>';
             reservoirItemHtml += `
             <div class="col-sm-6 col-md-4 col-lg-3 my-4">
                             <h5>${name}</h5>

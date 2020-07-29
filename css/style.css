@@ -81,6 +81,11 @@ h5{
     font-weight: bold;
 }
 
+.section-reservoir .region{
+  color: aliceblue;
+  font-weight: bolder;
+}
+
 /* Footer */
 #site-footer {
     position: relative;
