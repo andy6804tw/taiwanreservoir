@@ -18,6 +18,11 @@ const initProgress = () => {
 
             switch (percent) {
                 case 50:
+                    water.style.background = "#f4981f";
+                    wave_front.style.fill = "#f4981f";
+                    wave_back.style.fill = "#f4c689";
+                    break;
+                case 70:
                     water.style.background = "#1f8af4";
                     wave_front.style.fill = "#1f8af4";
                     wave_back.style.fill = "#a4ccf4";
