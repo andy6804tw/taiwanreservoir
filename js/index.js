@@ -49,6 +49,11 @@ axios.get(`https://www.taiwanstat.com/waters/latest`)
             const volumn=dataObject[0][reservoirList[i]].volumn;
             const daliyInflow= dataObject[0][reservoirList[i]].daliyInflow;
             const updateAt=dataObject[0][reservoirList[i]].updateAt;
+
+
+            if(reservoirList[i]==='新山水庫')
+            reservoirItemHtml+='<div id="north">北部</div>';
+
             reservoirItemHtml += `
             <div class="col-sm-6 col-md-4 col-lg-3 my-4">
                             <h5>${name}</h5>
