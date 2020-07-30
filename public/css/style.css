@@ -4,22 +4,22 @@ section{
 
 .bg-wrapper {
     height: 400px;
-    width: 100vw;
+    /* width: 100vw; */
     overflow: hidden;
     position: relative;
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5));
   }
   .bg-wrapper .bg {
-    height: 109%;
-    width: 106%;
+    height: 100%;
+    width: 100%;
     background-image: url(../image/banner2.jpg);
     background-position: center;
     background-size: cover; 
     position: absolute;
-    top: -25px;
-    left: -25px;
+    /* top: -25px;
+    left: -25px; */
     z-index: -99;
   }
 

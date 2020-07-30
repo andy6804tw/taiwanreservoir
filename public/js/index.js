@@ -11,11 +11,9 @@ const initProgress = () => {
         let stopPerVal = element.getAttribute("percent");
         let interval;
         let timer = 25;
-        interval = setInterval(function () {
-            percent++;
+        interval = setInterval(function () {            
             cnt.innerHTML = percent;
             water.style.transform = "translate(0" + "," + (100 - percent) + "%)";
-
             switch (percent) {
                 case 50:
                     water.style.background = "#f4981f";
@@ -28,10 +26,12 @@ const initProgress = () => {
                     wave_back.style.fill = "#a4ccf4";
                     break;
             }
-
             if (percent == stopPerVal) {
+                if(percent==0)
+                    water.innerHTML='';
                 clearInterval(interval);
             }
+            percent++;
         }, timer);
     }
 }
