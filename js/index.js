@@ -27,6 +27,8 @@ const initProgress = () => {
                     break;
             }
             if (percent == stopPerVal) {
+                if(percent==0)
+                    water.innerHTML='';
                 clearInterval(interval);
             }
             percent++;
