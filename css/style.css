@@ -44,7 +44,7 @@ section{
   margin: 7px 0px 23px 0px;
   text-shadow: 1px 2px 10px rgba(0, 0, 0, 0.3);
 }
-@media (max-width: 575.98px) {
+@media (max-width: 640px) {
   .bottom-content p {
     font-size: 14px;
   }
@@ -60,9 +60,14 @@ section{
   font-size: 60px;
   text-shadow: 1px 2px 10px rgba(0, 0, 0, 0.3);
 }
-@media (max-width: 575.98px) {
+@media (max-width: 640px) {
   .content-center .title {
-    font-size: 40px;
+    font-size: 38px;
+  }
+}
+@media (max-width: 364px) {
+  .content-center .title {
+    font-size: 27px;
   }
 }
 
