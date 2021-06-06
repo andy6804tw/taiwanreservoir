@@ -38,7 +38,7 @@ const initProgress = () => {
 
 const reservoirItem = document.getElementById('reservoirItem');
 let reservoirItemHtml = '';
-// 疫情統計
+// 水庫資訊
 axios.get(`https://www.taiwanstat.com/waters/latest`)
     .then((response) => {
         var dataObject = response.data;

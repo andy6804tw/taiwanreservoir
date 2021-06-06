@@ -38,8 +38,8 @@ const initProgress = () => {
 
 const reservoirItem = document.getElementById('reservoirItem');
 let reservoirItemHtml = '';
-// 疫情統計
-axios.get(`https://www.taiwanstat.com/waters/latest`)
+// 水庫資訊
+axios.get(`https://script.google.com/macros/s/AKfycbweMk-hqMxjf21L_zjzP-nyFIP5qbNP7ciKn6ymQl5n8iGt6m3M8DmeRtF7LwvuylEQ/exec`)
     .then((response) => {
         var dataObject = response.data;
         const reservoirList=['新山水庫','翡翠水庫','石門水庫','永和山水庫','寶山水庫','寶山第二水庫','明德水庫','鯉魚潭水庫'
