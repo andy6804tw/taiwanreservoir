@@ -11,7 +11,7 @@ const initProgress = () => {
         let stopPerVal = element.getAttribute("percent");
         let interval;
         let timer = 25;
-        interval = setInterval(function () {            
+        interval = setInterval(function () {
             cnt.innerHTML = percent;
             water.style.transform = "translate(0" + "," + (100 - percent) + "%)";
             switch (percent) {
@@ -27,8 +27,8 @@ const initProgress = () => {
                     break;
             }
             if (percent == stopPerVal) {
-                if(percent==0)
-                    water.innerHTML='';
+                if (percent == 0)
+                    water.innerHTML = '';
                 clearInterval(interval);
             }
             percent++;
@@ -42,29 +42,30 @@ let reservoirItemHtml = '';
 axios.get(`https://www.taiwanstat.com/waters/latest`)
     .then((response) => {
         var dataObject = response.data;
-        const reservoirList=['新山水庫','翡翠水庫','石門水庫','永和山水庫','寶山水庫','寶山第二水庫','明德水庫','鯉魚潭水庫'
-        ,'德基水庫','石岡壩','日月潭水庫','霧社水庫','湖山水庫','仁義潭水庫','蘭潭水庫'
-        ,'白河水庫','曾文水庫','烏山頭水庫','南化水庫','阿公店水庫','牡丹水庫']
+        const reservoirList = ['新山水庫', '翡翠水庫', '石門水庫', '永和山水庫', '寶山水庫', '寶山第二水庫', '明德水庫', '鯉魚潭水庫'
+            , '德基水庫', '石岡壩', '日月潭水庫', '霧社水庫', '湖山水庫', '仁義潭水庫', '蘭潭水庫'
+            , '白河水庫', '曾文水庫', '烏山頭水庫', '南化水庫', '阿公店水庫', '牡丹水庫']
         console.log(Object.keys(dataObject[0]).length)
         // render DOM
         for (let i = 0; i < Object.keys(dataObject[0]).length; i++) {
             const percent = Math.floor(Math.random() * 100) + 1;
-            const name=reservoirList[i];
-            const percentage=Math.floor(dataObject[0][reservoirList[i]].percentage);
-            const volumn=dataObject[0][reservoirList[i]].volumn;
-            const daliyInflow= dataObject[0][reservoirList[i]].daliyInflow;
-            const updateAt=dataObject[0][reservoirList[i]].updateAt;
+            const name = reservoirList[i];
+            const percentage = Math.floor(dataObject[0][reservoirList[i]].percentage);
+            const volumn = dataObject[0][reservoirList[i]].volumn;
+            const daliyInflow = dataObject[0][reservoirList[i]].daliyInflow;
+            const updateAt = dataObject[0][reservoirList[i]].updateAt;
 
 
-            if(reservoirList[i]==='新山水庫')
-                reservoirItemHtml+='<h3 class="region text-left col-12" id="north">北部</h3>';
-            else if(reservoirList[i]==='永和山水庫')
-                reservoirItemHtml+='<h3 class="region text-left col-12" id="central">中部</h3>';
-            else if(reservoirList[i]==='仁義潭水庫')
-            reservoirItemHtml+='<h3 class="region text-left col-12" id="south">南部</h3>';
+            if (reservoirList[i] === '新山水庫')
+                reservoirItemHtml += '<h3 class="region text-left col-12" id="north">北部</h3>';
+            else if (reservoirList[i] === '永和山水庫')
+                reservoirItemHtml += '<h3 class="region text-left col-12" id="central">中部</h3>';
+            else if (reservoirList[i] === '仁義潭水庫')
+                reservoirItemHtml += '<h3 class="region text-left col-12" id="south">南部</h3>';
             reservoirItemHtml += `
             <div class="col-sm-6 col-md-4 col-lg-3 my-4">
                             <h5>${name}</h5>
+                            <span style="color:#fff">${reservoirList[i] == '白河水庫' ? '(清淤中，無蓄水功能)' : ''}</span>
                             <div class="box" percent="${percentage}">
                                 <div class="percent">
                                     <div class="percentNum" id="count_${i}">0</div>
