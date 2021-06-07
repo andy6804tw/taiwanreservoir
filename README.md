@@ -13,3 +13,5 @@
 [經濟部水利署Open Data](http://fhy.wra.gov.tw/ReservoirPage_2011/StorageCapacity.aspx)
 
 [經濟部水利署防災資訊服務網](https://fhy.wra.gov.tw/fhy/Monitor/Reservoir)
+
+[蓄水設施營運統計報告名詞定義](http://wuss.wra.gov.tw/systeminfo.aspx)
