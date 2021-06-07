@@ -52,6 +52,7 @@ axios.get(`https://script.google.com/macros/s/AKfycbxTtz5XuUse7n2TwgBnuETpg0SX-_
             const percentage = Math.floor(dataObject[reservoirList[i]].percentage);
             const volumn = dataObject[reservoirList[i]].volumn;
             const daliyInflow = dataObject[reservoirList[i]].daliyInflow;
+            const daliyOverflow = dataObject[reservoirList[i]].daliyOverflow;
             const updateAt = dataObject[reservoirList[i]].updateAt;
 
 
@@ -81,8 +82,9 @@ axios.get(`https://script.google.com/macros/s/AKfycbxTtz5XuUse7n2TwgBnuETpg0SX-_
                             </div>
                             <div class="info">
                                 <span>有效蓄水量：${volumn}萬立方公尺</span><br>
-                            <span>今日進水量：${daliyInflow}萬立方公尺</span><br>
-                            <span>更新時間：${updateAt}</span>
+                                <span>今日進水量：${daliyInflow}萬立方公尺</span><br>
+                                <span>今日出水量：${daliyOverflow}萬立方公尺</span><br>
+                                <span>更新時間：${updateAt}</span>
                             </div>
                         </div>
             `
