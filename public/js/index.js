@@ -65,7 +65,6 @@ axios.get(`https://www.taiwanstat.com/waters/latest`)
             reservoirItemHtml += `
             <div class="col-sm-6 col-md-4 col-lg-3 my-4">
                             <h5>${name}</h5>
-                            <span style="color:#fff">${reservoirList[i] == '白河水庫' ? '(清淤中，無蓄水功能)' : ''}</span>
                             <div class="box" percent="${percentage}">
                                 <div class="percent">
                                     <div class="percentNum" id="count_${i}">0</div>
