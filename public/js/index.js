@@ -1,3 +1,4 @@
+
 const initProgress = () => {
     var box = document.getElementsByClassName("box");
     for (let key = 0; key < box.length; key++) {
@@ -38,22 +39,21 @@ const initProgress = () => {
 const reservoirItem = document.getElementById('reservoirItem');
 let reservoirItemHtml = '';
 // 水庫資訊
-axios.get(`https://script.google.com/macros/s/AKfycbxTtz5XuUse7n2TwgBnuETpg0SX-_93Ns60nnNEo1dv7xEViOUxGUFUlRTNPvTiNRwv/exec`)
+axios.get(`https://www.taiwanstat.com/waters/latest`)
     .then((response) => {
         var dataObject = response.data;
         const reservoirList = ['新山水庫', '翡翠水庫', '石門水庫', '永和山水庫', '寶山水庫', '寶山第二水庫', '明德水庫', '鯉魚潭水庫'
             , '德基水庫', '石岡壩', '日月潭水庫', '霧社水庫', '湖山水庫', '仁義潭水庫', '蘭潭水庫'
             , '白河水庫', '曾文水庫', '烏山頭水庫', '南化水庫', '阿公店水庫', '牡丹水庫']
-        console.log(Object.keys(dataObject).length - 2)
+        console.log(Object.keys(dataObject[0]).length)
         // render DOM
-        for (let i = 0; i < reservoirList.length; i++) {
+        for (let i = 0; i < Object.keys(dataObject[0]).length; i++) {
             const percent = Math.floor(Math.random() * 100) + 1;
             const name = reservoirList[i];
-            const percentage = Math.floor(dataObject[reservoirList[i]].percentage);
-            const volumn = dataObject[reservoirList[i]].volumn;
-            const daliyInflow = dataObject[reservoirList[i]].daliyInflow;
-            const daliyOverflow = dataObject[reservoirList[i]].daliyOverflow;
-            const updateAt = dataObject[reservoirList[i]].updateAt;
+            const percentage = Math.floor(dataObject[0][reservoirList[i]].percentage);
+            const volumn = dataObject[0][reservoirList[i]].volumn;
+            const daliyInflow = dataObject[0][reservoirList[i]].daliyInflow;
+            const updateAt = dataObject[0][reservoirList[i]].updateAt;
 
 
             if (reservoirList[i] === '新山水庫')
@@ -82,9 +82,8 @@ axios.get(`https://script.google.com/macros/s/AKfycbxTtz5XuUse7n2TwgBnuETpg0SX-_
                             </div>
                             <div class="info">
                                 <span>有效蓄水量：${volumn}萬立方公尺</span><br>
-                                <span>今日進水量：${daliyInflow}萬立方公尺</span><br>
-                                <span>今日出水量：${daliyOverflow}萬立方公尺</span><br>
-                                <span>更新時間：${updateAt}</span>
+                            <span>今日進水量：${daliyInflow}萬立方公尺</span><br>
+                            <span>更新時間：${updateAt}</span>
                             </div>
                         </div>
             `
@@ -96,3 +95,5 @@ axios.get(`https://script.google.com/macros/s/AKfycbxTtz5XuUse7n2TwgBnuETpg0SX-_
             var message = error.response.data.message;
         }
     );
+
+
