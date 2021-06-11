@@ -53,6 +53,7 @@ axios.get(`https://www.taiwanstat.com/waters/latest`)
             const percentage = Math.floor(dataObject[0][reservoirList[i]].percentage);
             const volumn = dataObject[0][reservoirList[i]].volumn;
             const daliyInflow = dataObject[0][reservoirList[i]].daliyInflow;
+            const daliyOverflow = dataObject[0][reservoirList[i]].daliyOverflow;
             const updateAt = dataObject[0][reservoirList[i]].updateAt;
 
 
@@ -82,6 +83,7 @@ axios.get(`https://www.taiwanstat.com/waters/latest`)
                             <div class="info">
                                 <span>有效蓄水量：${volumn}萬立方公尺</span><br>
                             <span>今日進水量：${daliyInflow}萬立方公尺</span><br>
+                            <span>今日出水量：${daliyOverflow}萬立方公尺</span><br>
                             <span>更新時間：${updateAt}</span>
                             </div>
                         </div>
