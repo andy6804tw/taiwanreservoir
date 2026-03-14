@@ -38,8 +38,8 @@ const initProgress = () => {
 
 const reservoirItem = document.getElementById('reservoirItem');
 let reservoirItemHtml = '';
-// 水庫資訊
-axios.get(`https://www.taiwanstat.com/waters/latest`)
+// 水庫資訊(Thanks 用數據看台灣)
+axios.get(`https://water.taiwanstat.com`)
     .then((response) => {
         var dataObject = response.data;
         const reservoirList = ['新山水庫', '翡翠水庫', '石門水庫', '永和山水庫', '寶山水庫', '寶山第二水庫', '明德水庫', '鯉魚潭水庫'
